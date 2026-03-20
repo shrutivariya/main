@@ -15,7 +15,7 @@ Route::get('/user', function (Request $request) {
 
 
 
-// login
+// login 
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 // roles 
 Route::middleware(['auth:sanctum', 'role:superAdmin'])->group(function () {
