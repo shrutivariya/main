@@ -31,7 +31,7 @@ const routes = [
       { path: '/user/newregister', name: 'User/ Register' ,component: newRegister},
       { path: '/user/view', name: 'User/ View' ,component: viewUser},
       { path: '/addExcelData', name: 'Dashboard/ AddExcelData' ,component: addExcelData},
-      // Add more protected routes here
+      // Add more protected routes here set
     ],
   },
 
