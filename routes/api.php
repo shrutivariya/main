@@ -48,4 +48,5 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/editInvoice/{id}', [InvoiceController::class, 'editInvoice']);
 });
 
-Route::get('/get-currencies', [CurrencyController::class, 'getCurrencies']);
+Route::post('/store-currencies', [CurrencyController::class, 'StoreCurrencies']);
+Route::get('/get-currencies', [CurrencyController::class, 'GetCurrencies']);

@@ -28,5 +28,7 @@ class Invoice extends Model
         'followup_date',
         'release_amount_date',
         'release_amount_inr',
+        'currency_status',
+        'release_currency_status',
     ];
 }

@@ -81,11 +81,13 @@ class InvoiceController extends Controller
             'bank_account_name'      => $request->bank_account_name ?? $invoice->bank_account_name,
             'invoice_status'         => $request->invoice_status ?? $invoice->invoice_status,
             'amount_usd'             => $request->amount_usd ?? $invoice->amount_usd,
+            'currency_status'        => $request->currency_status ?? $invoice->currency_status,
             'sent_via'               => $request->sent_via ?? $invoice->sent_via,
             'invoice_release_status' => $request->invoice_release_status ?? $invoice->invoice_release_status,
             'followup_date'          => $this->convertExcelDate($request->followup_date ?? $invoice->followup_date),
             'release_amount_date'    => $this->convertExcelDate($request->release_amount_date ?? $invoice->release_amount_date),
             'release_amount_inr'     => $request->release_amount_inr ?? $invoice->release_amount_inr,
+            'release_currency_status' => $request->release_currency_status ?? $invoice->release_currency_status,
         ]);
 
         return response()->json(['status' => true, 'message' => 'Invoice updated successfully', 'data' => $invoice], 200);
